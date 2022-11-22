@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Evoluent)(type KiCad)(uri ${KIPRJMOD}/Evoluent.pretty)(options "")(descr ""))
+)

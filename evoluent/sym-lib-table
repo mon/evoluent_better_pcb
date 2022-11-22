@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name PMW3360-T2QU)(type Legacy)(uri ${KIPRJMOD}/Lib/PMW3360-T2QU.lib)(options "")(descr ""))
+  (lib (name evoluent-rescue)(type Legacy)(uri ${KIPRJMOD}/evoluent-rescue.lib)(options "")(descr ""))
+)
