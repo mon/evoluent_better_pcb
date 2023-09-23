@@ -8,41 +8,63 @@ even moderately fast moves across the mousepad.
 So, I created this drop-in replacement PCB to upgrade the sensor to a gaming
 grade PMW3360DM, using an atmega32u4 and Arduino.
 
+## Supported models
+So far this seems to work with
+- VMD
+- VMC
+- VM4 (large and small)
+
+It *may* work with the VM3.
+
 The current design only supports wired models.
 
-## The PCB
+## Installation
 
 ![PCB image](img/pcb.jpg)
 
-The PCB has the same shape and pinouts as the stock PCB - it should be as simple
-as taking the bottom off your mouse (which unfortunately requires removing two
-of the non-slip feet), unscrewing and unplugging the stock PCB, and replacing
-with this one.
+The PCB has the same shape and pinouts as the stock PCB and is a drop-in replacement.
 
-It uses the recommended circuit for the PMW3360, with a 1.8v core voltage and
-3.3v IO voltage, with the Arduino also running at 3.3v (not 5v).
+### Step 1
+Remove the bottom off your mouse - this unfortunately requires
+taking some of the non-slip feet off. Be as careful as possible to not mangle
+the feet when you remove them, or you will significantly affect the smooth feel
+of the mouse.
 
-The PCB is in the `evoluent` subfolder. There are gerbers in `evoluent/gerbers`.
+**It is normal for surface smoothness to be poor after you replace the feet.
+When I upgraded my VMD, it took 2-3 weeks to return to normal feeling.**
 
-## Assembly/BOM
+For the **Large** VerticalMouse D, the screws are located here:
+![VMD Right Large](img/vmd_large_screws.jpg)
 
-There is a full BOM csv in `evoluent/gerbers`.
+For the VerticalMouse **C**, the screws are located here:  
+![VMC](img/vmc_screws.jpg)
 
-At the time of writing, parts shortages make the atmega32u4 a little difficult
-to source from normal suppliers, but aliexpress usually has them for not too
-much money.
+For the **Small** VerticalMouse 4, the screws are located here:  
+![VM4 Right Small](img/vm4_small_screws.jpg)
 
-The PMW3360DM (with lens) can be easily bought from aliexpress for about $10
-USD.
+### Step 2
+With the bottom of the mouse removed, unplug all cables from the existing PCB.
 
-The FPC connectors for the buttons can be any thru-hole soldered, 1mm pitch
-connector. The schematic has the JST 08FMZ-BT/10FMZ-BT, but I ended up buying
-something else.
+The USB cable (the one located at the back of the PCB) can take a fair amount of
+force to remove. Ensure you grip at the base of the cable to avoid damage.
 
-The USB connector is compatible with JST-PH.
+The ribbon cables must also be gripped at the base when removing/replacing them,
+as they are more fragile than normal cables.
 
-The other components are fairly standard, and if the 3v3/1v8 regulators are
-unavailable, there will be pin-compatible replacements easily available.
+## Step 3
+Unscrew and remove the existing PCB. The screws are located here:
+![VM inner screws](img/pcb_screws.jpg)
+
+## Step 4
+Repeat the disassembly steps in reverse.
+
+## Step 5 (Optional)
+For shipped PCBs: If the default firmware is not to your liking, customise it
+using the Arduino toolchain. See the "Firmware" section (you can skip the
+bootloader as the PCB ships with one).
+
+For PCBs you make yourself: You need to flash the bootloader and firmware, see
+the "Firmware" section.
 
 ## Firmware
 
@@ -80,6 +102,29 @@ The default DPI is the second entry in the list. Clicking the DPI button when
 the DPI indicator LEDs are off will show the current DPI. Clicking again within
 5 seconds will move the selected DPI through the list. This does not persist
 over a power cycle.
+
+## The PCB
+
+It uses the recommended circuit for the PMW3360, with a 1.8v core voltage and
+3.3v IO voltage, with the Arduino also running at 3.3v (not 5v).
+
+The PCB is in the `evoluent` subfolder. There are gerbers in `evoluent/production`.
+
+## Assembly/BOM
+
+There is a full BOM csv in `evoluent/production`.
+
+The PMW3360DM (with lens) can be easily bought from aliexpress for about $10
+USD.
+
+The FPC connectors for the buttons can be any thru-hole soldered, 1mm pitch
+connector. The schematic has the JST 08FMZ-BT/10FMZ-BT, but I ended up buying
+something else.
+
+The USB connector is compatible with JST-PH.
+
+The other components are fairly standard, and if the 3v3/1v8 regulators are
+unavailable, there will be pin-compatible replacements easily available.
 
 ## Support
 

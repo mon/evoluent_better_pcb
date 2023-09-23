@@ -31,7 +31,7 @@ USBRename dummy = USBRename("Evoluent VMD", "mon.im");
 // Configurations
 // The default CPI value should be in between 100 -- 12000
 #define CPI       800
-#define DEBOUNCE  20   //unit = ms.
+#define DEBOUNCE  30   //unit = ms.
 
 // Registers
 #define Product_ID  0x00

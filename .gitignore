@@ -4,3 +4,5 @@ debug_buttons/debug_buttons.ino
 evoluent/gerbers
 *.kicad_pcb-bak
 *.sch-bak
+evoluent/evoluent.kicad_prl
+evoluent/evoluent-rescue.kicad_sym
