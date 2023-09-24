@@ -33,8 +33,8 @@ of the mouse.
 **It is normal for surface smoothness to be poor after you replace the feet.
 When I upgraded my VMD, it took 2-3 weeks to return to normal feeling.**
 
-For the **Large** VerticalMouse D, the screws are located here:
-![VMD Right Large](img/vmd_large_screws.jpg)
+For the **Large** VerticalMouse D, the screws (some of which are Torx security
+bits) are located here: ![VMD Right Large](img/vmd_large_screws.jpg)
 
 For the VerticalMouse **C**, the screws are located here:  
 ![VMC](img/vmc_screws.jpg)
