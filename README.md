@@ -72,6 +72,12 @@ the "Firmware" section.
   Leonardo bootloader.
 - Install the AdvMouse library from the [PMW3360_Arduino
   repository](https://github.com/SunjunKim/PMW3360_Arduino)
+- Install the Encoder library under Tools -> Manage Libraries
+- The Arduino IDE might not automatically recognise the required files for the project to build. They are:
+  - `SROM_0x04_Arduino.ino`
+  - `better_evoluent.ino`
+  - `usb_rename.cpp`
+  - `usb_rename.h`
 - Customise your button layout in the struct `button_t buttons[]`.
   - The pin map is:
   - 10: Top mouse button
